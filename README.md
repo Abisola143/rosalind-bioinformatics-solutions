@@ -1,4 +1,4 @@
-# Organising-Amino-Acid-Sequences
+
 #  Rosalind Bioinformatics Solutions
 
 A highly structured, open-source repository dedicated to mastering biological string-manipulation, algorithmic code efficiency, and data architecture. 
