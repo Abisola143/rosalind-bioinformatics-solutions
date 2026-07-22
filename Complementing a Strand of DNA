@@ -1,0 +1,6 @@
+with open(r"C:\Users\Akinyemi\Downloads\rosalind_revc.txt", "r") as file:
+    a = file.readline()
+b = a.replace("A", "t").replace("C", "g").replace("T", "a").replace("G", "c")
+b = b[::-1]
+b = b.upper()
+print(b)
