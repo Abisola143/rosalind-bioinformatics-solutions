@@ -1,0 +1,4 @@
+with open(r"C:\Users\Akinyemi\Downloads\rosalind_rna (2).txt", "r") as file:
+    a = file.readline()
+b = a.replace("T","U")
+print(b)
