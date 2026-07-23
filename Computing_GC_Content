@@ -1,0 +1,31 @@
+def sequence(fasta_file_path):
+    dna_list = {}
+    current_name = ""
+
+    with open(fasta_file_path) as file:
+        for line in file:
+            line = line.strip()
+            if line.startswith(">"):
+                current_name = line[1:]
+                dna_list[current_name] = ""
+            else:
+                dna_list[current_name] += line
+    highest_id = ""
+    highest_seq = -1.0
+
+    for seq_id, seq in dna_list.items():
+        if not seq:
+            continue
+        gc_count = seq.count("G") + seq.count("C")
+        total_length = len(seq)
+
+        gc_content = (gc_count / total_length) * 100
+
+        if gc_content > highest_seq:
+            highest_seq = gc_content
+            highest_id = seq_id
+
+    print(f"{highest_id}")
+    print(f"{highest_seq:6f}")
+
+sequence(r"C:\Users\Akinyemi\Downloads\rosalind_gc.txt")
